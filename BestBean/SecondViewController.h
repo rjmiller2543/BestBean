@@ -7,7 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import "AppDelegate.h"
 
-@interface SecondViewController : UIViewController
+
+@interface SecondViewController : UIViewController  <MKMapViewDelegate, CLLocationManagerDelegate, UIGestureRecognizerDelegate>
+{
+    MKMapView * mapView;
+}
+
+@property (nonatomic, retain) MKMapView * mapView;
+@property (nonatomic, retain) UISwitch * userSwitch;
+@property (nonatomic, retain) NSMutableArray * annotationArray;
+@property (nonatomic, retain) CLLocationManager * locationManager;
+@property (nonatomic, retain) NSArray * parseObjects;
+@property (nonatomic, retain) UIView * detailView;
+@property (nonatomic, retain) UITapGestureRecognizer * mapTapGesture;
 
 @end

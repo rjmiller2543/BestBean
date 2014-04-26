@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
+#import <FacebookSDK/FacebookSDK.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
++(id)sharedInstance;
+
 @property (strong, nonatomic) UIWindow *window;
+
+@property (nonatomic, retain) PFUser *parseUser;
+@property (nonatomic, retain) UIColor * subViewTintColor;
 
 @end
